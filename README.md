@@ -32,8 +32,9 @@ sporce the live across the lawmens of the Computing them their story, the use th
 #### Sample From a Different Input File
 In experimenting with the input file, we decided to use a shorter version with a repetitive vocabulary. We extracted Wikipedia text from the gameplay section only about puzzle games [GameplayPuzzles](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games/blob/main/GameplayPuzzles.txt). Here is the sample we received.
 ##### 659/660 (epoch 109), train_loss = 2.161, time/batch = 0.084
-
-`eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. thing a saxo fupsaic bactor the an cleecutes the beres. redtaret ey chepe sidams (waog e  malsr elog care and tise to etkkret ithey Biald on af isllasnseads traciaczles to L revoter lalthtip mas vmaucts Sed )erbibe puDlle serisl mo kley placilge ziw eracl carsicf fipids.sdith the te gker somt.s fiwe semdith ix Goces molings the mond thse cacpes bales on fom silh a whel`
+```
+> eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. thing a saxo fupsaic bactor the an cleecutes the beres. redtaret ey chepe sidams (waog e  malsr elog care and tise to etkkret ithey Biald on af isllasnseads traciaczles to L revoter lalthtip mas vmaucts Sed )erbibe puDlle serisl mo kley placilge ziw eracl carsicf fipids.sdith the te gker somt.s fiwe semdith ix Goces molings the mond thse cacpes bales on fom silh a whel
+```
 
 ## Tuning
 
