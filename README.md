@@ -21,19 +21,43 @@ You can use any plain text file as input. In this project, we used the output te
 
 ## Output Samples
 Here are some examples of samples we got based on various modifications completed to the training model.
+
 #### Sample From the Inital Training
 This one is based on full descriptions of 110 games:
 ```
-can only direct story moming out of Game of the game is a villuse "the test dead in to the form, while they had screen is not how 
-they have blog to the class, a moving months atcess that they could be reward the Campaigoni (on Otton 64 and BioShock 2 was the past
+can only direct story moming out of Game of the game is a villuse "the test dead in to the form, while they had screen is not how they 
+have blog to the class, a moving months atcess that they could be reward the Campaigoni (on Otton 64 and BioShock 2 was the past
 of Japan better up at the same you began your ball of set in the game not this game to terms in hosper been "itsumes the besout to 
 sporce the live across the lawmens of the Computing them their story, the use the game's best launchers,
 ```
 #### Sample From a Different Input File
 In experimenting with the input file, we decided to use a shorter version with a repetitive vocabulary. We extracted Wikipedia text from the gameplay section only about puzzle games [GameplayPuzzles](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games/blob/main/GameplayPuzzles.txt). Here is the sample we received.
-##### 659/660 (epoch 109), train_loss = 2.161, time/batch = 0.084
+
+###### 659/660 (epoch 109), train_loss = 2.161, time/batch = 0.084
 ```
-> eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. thing a saxo fupsaic bactor the an cleecutes the beres. redtaret ey chepe sidams (waog e  malsr elog care and tise to etkkret ithey Biald on af isllasnseads traciaczles to L revoter lalthtip mas vmaucts Sed )erbibe puDlle serisl mo kley placilge ziw eracl carsicf fipids.sdith the te gker somt.s fiwe semdith ix Goces molings the mond thse cacpes bales on fom silh a whel
+eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. 
+thing a saxo fupsaic bactor the an cleecutes the beres. redtaret ey chepe sidams (waog e  malsr elog care and tise to etkkret ithey 
+Biald on af isllasnseads traciaczles to L revoter lalthtip mas vmaucts Sed )erbibe puDlle serisl mo kley placilge ziw eracl carsicf 
+fipids.sdith the te gker somt.s fiwe semdith ix Goces molings the mond thse cacpes bales on fom silh a whel
+```
+The train loss during this experiment turned out to be pretty high, so we decided to return to the initial input file.
+
+#### Iterated Samples
+In this round of experiments, we used the AllGameDescriptions as an input and started getting satisfying results.
+
+##### 32699/32700 (epoch 149), train_loss = 1.184, time/batch = 0.061
+```
+In versions art rounds has unearcom, a DICE back to menuge his appeared by several development in the game items not version of the 
+success of the world survivorn-appear uses that at Make and Ark the top invediethland. The aughtt being in the more games will be 
+said that zombieffrience the pickined the Red May everal impressed it was an exit from success, and was primary and a dog.
+```
+
+##### 15259/15260 (epoch 69), train_loss = 0.549, time/batch = 0.153  (rnn size 400)
+```
+had previous installments, including Square Enix. Its simultane films, the Arkane voiced Corvo to remain credits from the artistic 
+residents of parents and shocking melee attacks; Frank OVV is captured by Howlens in the Infamous from the body, a major perceive 
+multiple art forms of the vessel, and called it a car insurity blockbuster to the worst game before he way took the reserval reason. 
+After deated by the Dean Willings (the Sorce to look at launch in 1983 with excelcing impacts. It is playa
 ```
 
 ## Tuning
