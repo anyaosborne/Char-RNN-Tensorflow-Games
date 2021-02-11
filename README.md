@@ -7,7 +7,8 @@ The project was executed on Windows 10 64x, using Anaconda environments, utilizi
 * **TensorFlow 1.15.0** (tensorflow-gpu==1.15) - We used the following installation guide - [*Anaconda TensorFlow*](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/?highlight=tensorflow).
 * Install **pip** - We used [*pip 21.0.1*](https://anaconda.org/conda-forge/pip)
 * **Python 3+** - We used Python 3.7.9, but it can work with 2.7, 3.6, 3.5, and 3.4.
-* Install **numpy** into your environment. The version we used is 1.20.0
+* Install **numpy** into your environment. The version we used is 1.20.0. Here is a guide on [*Installing NUMPY*](https://numpy.org/install/).
+* Lastly, you would most probably need to install **six 1.15.0**. [*Six*](https://pypi.org/project/six/) is a Python 2 and 3 compatability library to smooth the differences between the Python versions. 
 
 ## Basic Usage
 To train with default parameters on the games corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
