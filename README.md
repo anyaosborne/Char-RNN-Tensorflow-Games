@@ -1,17 +1,18 @@
 ## Char-RNN-Tensorflow-Games
 
-This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](https://github.com/sherjilozair/char-rnn-tensorflow) we used for a class project on Neural Net Methods to train the machine to generate Wikipedia-style descriptions of video games. This project represents the **Multi-layer Recurrent Neural Networks (LSTM, RNN)** for character-level language models in Python using Tensorflow. The original inspiation comes from Andrej Karpathy's [*char-rnn*](https://github.com/karpathy/char-rnn). We modified the training model so it produces a satisfying result based on the given custom dataset.
+This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](https://github.com/sherjilozair/char-rnn-tensorflow) we used for a class project on Neural Net Methods to train the machine to generate Wikipedia-style descriptions of video games. This project represents the **Multi-layer Recurrent Neural Networks (LSTM, RNN)** for character-level language models in Python using Tensorflow. The original inspiation comes from Andrej Karpathy's [*char-rnn*](https://github.com/karpathy/char-rnn). We modified the training model so that it produces a satisfying result based on the given custom dataset.
 
 ## Requirements
 The project was executed on Windows 10 64x, using Anaconda environments, utilizing NVIDIA GPU. Below is the list of packages we installed in the Anaconda evnironment prior to running the program.
-* **TensorFlow 1.15.0** (tensorflow-gpu==1.15) - We used the following installation guide - [*Anaconda TensorFlow*](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/?highlight=tensorflow).
+* **TensorFlow 1.15.0** (tensorflow-gpu==1.15) - We used the following installation guide - [*Anaconda TensorFlow*](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/?highlight=tensorflow). 
 * Install **pip** - We used [*pip 21.0.1*](https://anaconda.org/conda-forge/pip)
 * **Python 3+** - We used Python 3.7.9, but it can work with 2.7, 3.6, 3.5, and 3.4.
 * Install **numpy** into your environment. The version we used is 1.20.0. Here is a guide on [*Installing NUMPY*](https://numpy.org/install/).
-* Lastly, you would most probably need to install **six 1.15.0**. [*Six*](https://pypi.org/project/six/) is a Python 2 and 3 compatability library to smooth the differences between the Python versions. 
+* Lastly, you will likely need to install **six 1.15.0**. [*Six*](https://pypi.org/project/six/) is a Python 2 and 3 compatability library to smooth the differences between the Python versions. 
 
-## Basic Usage
-To train with default parameters on the games corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
+## How to Execute The Code
+1. To train, run [train.py](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/blob/main/train.py). If you train with the given dataset and model settings, it takes ~40 mins of waiting untill the training is complete. The command to run the training is `python train.py` (make sure the path in the evnironment is correct). To access all the parameters use `python train.py --help`.
+2. In result of training, it will create new [*logs*](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/logs), checkpoints and vocabulary in the [*save*](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/save) and [*games*](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/data/games) folders.
 
 To sample from a checkpointed model, `python sample.py`.
 Sampling while the learning is still in progress (to check last checkpoint) works only in CPU or using another GPU.
