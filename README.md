@@ -68,3 +68,5 @@ In this round of experiments, we used the AllGameDescriptions as an input and st
 
 ##### 15259/15260 (epoch 69), train_loss = 0.500, time/batch = 0.183 (rnn size 450)
 >included Luke System, ATMA-LITI games released the Quantian 1 Up Studios. It featured characters and audio and God of War I and God of War II and God of War IV the developer map Official Nintendo LoPa (a President changed the Special Acrobatic DLC) who previously not years led to develop.The game's concept for CandySwipe wroth that the original books was released worldwide on March 6, 2010 by Synergistic Byramightwaction film, Opener and Story, Laos Dea Yestwaure, China and Sony Clarke. Benjamor
+
+Here is more examples of samples we received - [Sample Output](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/blob/main/Sample%20Output.pdf). 
