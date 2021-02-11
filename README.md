@@ -19,6 +19,23 @@ The project was executed on Windows 10 64x, using Anaconda environments, utilizi
 ## About Dataset
 You can use any plain text file as input. In this project, we used the output text generated from our [anyaosborne/Wikipedia-Text-Extractor-Games](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games) that includes 110 game descriptions extracted from Wikipedia as a plain text file.
 
+## Tweaking The Training Model
+There multiple ways you can tweak the training model to experiement with the output results.
+
+1. You can start with cleaning the input.txt to as much as possible (e.g. we removed unnessary symbols, line spaces, headings, etc.)
+3. Use tensorboard to compare all of your runs visually to aid in experimenting (see more info below).
+4. Tweak `--rnn_size`to somewhat from 128 if you have a lot of input data. We've got a large input file, so our `--rnn_size` was 400.
+5. Tweak `--num_layers` from 2 to 3 but it is recommended no higher unless you have experience (e.g. we used 3 layers).
+6. Tweak `--seq_length` up from 50 based on the length of a valid input string. In our input we used sentenced, so we set it up to 64 characters. For names, you can use <=12 characters. An lstm cell will "remember" for durations longer than this sequence, but the effect falls off for longer character distances.
+7. Once you've done all that, you can add some dropout. Start with `--output_rate 0.8` and maybe end up with both `--input_rate 0.8` `--output_rate 0.5` only after exhausting all the above values.
+
+## Tensorboard
+To visualize training progress, model graphs, and internal state histograms:  fire up Tensorboard and point it at your `log_dir`.  E.g.:
+```bash
+$ tensorboard --logdir=./logs/
+```
+Then open a browser to [http://localhost:6006](http://localhost:6006) or the correct IP/Port specified.
+
 ## Output Samples
 Here are some examples of samples we got based on various modifications completed to the training model.
 
@@ -42,20 +59,3 @@ In this round of experiments, we used the AllGameDescriptions as an input and st
 
 ##### 15259/15260 (epoch 69), train_loss = 0.549, time/batch = 0.153  (rnn size 400)
 >had previous installments, including Square Enix. Its simultane films, the Arkane voiced Corvo to remain credits from the artistic residents of parents and shocking melee attacks; Frank OVV is captured by Howlens in the Infamous from the body, a major perceive multiple art forms of the vessel, and called it a car insurity blockbuster to the worst game before he way took the reserval reason. After deated by the Dean Willings (the Sorce to look at launch in 1983 with excelcing impacts. It is playa
-
-## Tweaking The Training Model
-There multiple ways you can tweak the training model to experiement with the output results.
-
-1. You can start with cleaning the input.txt to as much as possible (e.g. we removed unnessary symbols, line spaces, headings, etc.)
-3. Use tensorboard to compare all of your runs visually to aid in experimenting (see more info below).
-4. Tweak `--rnn_size`to somewhat from 128 if you have a lot of input data. We've got a large input file, so our `--rnn_size` was 400.
-5. Tweak `--num_layers` from 2 to 3 but it is recommended no higher unless you have experience (e.g. we used 3 layers).
-6. Tweak `--seq_length` up from 50 based on the length of a valid input string. In our input we used sentenced, so we set it up to 64 characters. For names, you can use <=12 characters. An lstm cell will "remember" for durations longer than this sequence, but the effect falls off for longer character distances.
-7. Once you've done all that, you can add some dropout. Start with `--output_rate 0.8` and maybe end up with both `--input_rate 0.8` `--output_rate 0.5` only after exhausting all the above values.
-
-## Tensorboard
-To visualize training progress, model graphs, and internal state histograms:  fire up Tensorboard and point it at your `log_dir`.  E.g.:
-```bash
-$ tensorboard --logdir=./logs/
-```
-Then open a browser to [http://localhost:6006](http://localhost:6006) or the correct IP/Port specified.
