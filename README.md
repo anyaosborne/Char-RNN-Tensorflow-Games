@@ -39,9 +39,7 @@ If you are in the exact directory, you can also use this command:
 tensorboard --logdir=./logs/
 ```
 This will promt you with the link you can open in a browser: E.g. [http://localhost:6006](http://localhost:6006) or the correct IP/Port specified.
-Here are some examples of  our Tensoboard histograms.
-
-https://user-images.githubusercontent.com/40152878/107638347-82bd7480-6c80-11eb-876b-b3cc47240ce8.png
+Here are some examples of  our [Tensoboard histograms](https://user-images.githubusercontent.com/40152878/107638347-82bd7480-6c80-11eb-876b-b3cc47240ce8.png).
 
 ## Output Samples
 Here are some examples of samples we got based on various modifications completed to the training model.
@@ -66,3 +64,7 @@ In this round of experiments, we used the AllGameDescriptions as an input and st
 
 ##### 15259/15260 (epoch 69), train_loss = 0.549, time/batch = 0.153  (rnn size 400)
 >had previous installments, including Square Enix. Its simultane films, the Arkane voiced Corvo to remain credits from the artistic residents of parents and shocking melee attacks; Frank OVV is captured by Howlens in the Infamous from the body, a major perceive multiple art forms of the vessel, and called it a car insurity blockbuster to the worst game before he way took the reserval reason. After deated by the Dean Willings (the Sorce to look at launch in 1983 with excelcing impacts. It is playa
+
+
+##### 15259/15260 (epoch 69), train_loss = 0.500, time/batch = 0.183 (rnn size 450)
+>included Luke System, ATMA-LITI games released the Quantian 1 Up Studios. It featured characters and audio and God of War I and God of War II and God of War IV the developer map Official Nintendo LoPa (a President changed the Special Acrobatic DLC) who previously not years led to develop.The game's concept for CandySwipe wroth that the original books was released worldwide on March 6, 2010 by Synergistic Byramightwaction film, Opener and Story, Laos Dea Yestwaure, China and Sony Clarke. Benjamor
