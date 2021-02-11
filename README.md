@@ -1,11 +1,13 @@
 ## Char-RNN-Tensorflow-Games
 
-Multi-layer Recurrent Neural Networks (LSTM, RNN) for character-level language models in Python using Tensorflow.
-
-Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn).
+This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](https://github.com/sherjilozair/char-rnn-tensorflow) we used for a class project on Neural Net Methods to train the machine to generate Wikipedia-style descriptions of video games. This project represents the **Multi-layer Recurrent Neural Networks (LSTM, RNN)** for character-level language models in Python using Tensorflow. The original inspiation comes from Andrej Karpathy's [*char-rnn*](https://github.com/karpathy/char-rnn). We modified the training model so it produces a satisfying result based on the given custom dataset.
 
 ## Requirements
-- [Tensorflow 1.0](http://www.tensorflow.org)
+The project was executed on Windows 10 64x, using Anaconda environments, utilizing NVIDIA GPU. Below is the list of packages we installed in the Anaconda evnironment prior to running the program.
+* **TensorFlow 1.15.0** (tensorflow-gpu==1.15) - We used the following installation guide - [*Anaconda TensorFlow*](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/?highlight=tensorflow).
+* Install **pip** - We used [*pip 21.0.1*](https://anaconda.org/conda-forge/pip)
+* **Python 3+** - We used Python 3.7.9, but it can work with 2.7, 3.6, 3.5, and 3.4.
+* Install **numpy** into your environment. The version we used is 1.20.0
 
 ## Basic Usage
 To train with default parameters on the games corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
