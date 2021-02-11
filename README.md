@@ -23,18 +23,25 @@ You can use any plain text file as input. In this project, we used the output te
 There multiple ways you can tweak the training model to experiement with the output results.
 
 1. You can start with cleaning the input.txt to as much as possible (e.g. we removed unnessary symbols, line spaces, headings, etc.)
-3. Use tensorboard to compare all of your runs visually to aid in experimenting (see more info below).
+3. Use [Tensorboard](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games#tensorboard) to compare all of your runs visually to aid in experimenting (see more info below).
 4. Tweak `--rnn_size`to somewhat from 128 if you have a lot of input data. We've got a large input file, so our `--rnn_size` was 400.
 5. Tweak `--num_layers` from 2 to 3 but it is recommended no higher unless you have experience (e.g. we used 3 layers).
 6. Tweak `--seq_length` up from 50 based on the length of a valid input string. In our input we used sentenced, so we set it up to 64 characters. For names, you can use <=12 characters. An lstm cell will "remember" for durations longer than this sequence, but the effect falls off for longer character distances.
 7. Once you've done all that, you can add some dropout. Start with `--output_rate 0.8` and maybe end up with both `--input_rate 0.8` `--output_rate 0.5` only after exhausting all the above values.
 
 ## Tensorboard
-To visualize training progress, model graphs, and internal state histograms:  fire up Tensorboard and point it at your `log_dir`.  E.g.:
-```bash
-$ tensorboard --logdir=./logs/
+When experimenting with tweaking the training model, it is helpful to visualize the process in Tensoboard. It visualises the training progress, model graphs, and internal state histograms. To run Tensorboard, you need to upload your log files using the following command:
 ```
-Then open a browser to [http://localhost:6006](http://localhost:6006) or the correct IP/Port specified.
+tensorboard tensorboard --logdir <PATH TO LOG FILES>
+```
+If you are in the exact directory, you can also use this command:
+```
+tensorboard --logdir=./logs/
+```
+This will promt you with the link you can open in a browser: E.g. [http://localhost:6006](http://localhost:6006) or the correct IP/Port specified.
+Here are some examples of  our Tensoboard histograms.
+
+https://user-images.githubusercontent.com/40152878/107638347-82bd7480-6c80-11eb-876b-b3cc47240ce8.png
 
 ## Output Samples
 Here are some examples of samples we got based on various modifications completed to the training model.
