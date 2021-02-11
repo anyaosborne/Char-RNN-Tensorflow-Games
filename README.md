@@ -1,4 +1,4 @@
-## Char-RNN-Tensorflow-Games
+# Char-RNN-Tensorflow-Games
 
 This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](https://github.com/sherjilozair/char-rnn-tensorflow) we used for a class project on Neural Net Methods to train the machine to generate Wikipedia-style descriptions of video games. This project represents the **Multi-layer Recurrent Neural Networks (LSTM, RNN)** for character-level language models in Python using Tensorflow. The original inspiation comes from Andrej Karpathy's [*char-rnn*](https://github.com/karpathy/char-rnn). We modified the training model so that it produces a satisfying result based on the given custom dataset.
 
@@ -21,21 +21,22 @@ You can use any plain text file as input. In this project, we used the output te
 
 ## Output Samples
 Here are some examples of samples we got based on various modifications completed to the training model.
-**Sample From the Inital Training** - based on full descriptions of 110 games:
+#### Sample From the Inital Training
+This one is based on full descriptions of 110 games:
 ```
 can only direct story moming out of Game of the game is a villuse "the test dead in to the form, while they had screen is not how 
 they have blog to the class, a moving months atcess that they could be reward the Campaigoni (on Otton 64 and BioShock 2 was the past
 of Japan better up at the same you began your ball of set in the game not this game to terms in hosper been "itsumes the besout to 
 sporce the live across the lawmens of the Computing them their story, the use the game's best launchers,
 ```
-**Sample From a Different Input File** - in experimenting with the input file, we decided to use a shorter version with a repetitive vocabulary. We extracted Wikipedia text from the gameplay section only about puzzle games [GameplayPuzzles](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games/blob/main/GameplayPuzzles.txt). Here is the sample we received.
-**659/660 (epoch 109), train_loss = 2.161, time/batch = 0.084**
-```
-eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. 
+#### Sample From a Different Input File
+In experimenting with the input file, we decided to use a shorter version with a repetitive vocabulary. We extracted Wikipedia text from the gameplay section only about puzzle games [GameplayPuzzles](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games/blob/main/GameplayPuzzles.txt). Here is the sample we received.
+##### 659/660 (epoch 109), train_loss = 2.161, time/batch = 0.084
+
+> eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. 
 thing a saxo fupsaic bactor the an cleecutes the beres. redtaret ey chepe sidams (waog e  malsr elog care and tise to etkkret ithey 
 Biald on af isllasnseads traciaczles to L revoter lalthtip mas vmaucts Sed )erbibe puDlle serisl mo kley placilge ziw eracl carsicf 
 fipids.sdith the te gker somt.s fiwe semdith ix Goces molings the mond thse cacpes bales on fom silh a whel
-```
 
 ## Tuning
 
