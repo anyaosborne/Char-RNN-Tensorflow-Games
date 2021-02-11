@@ -4,37 +4,32 @@ This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](http
 
 ## Requirements
 The project was executed on Windows 10 64x, using Anaconda environments, utilizing NVIDIA GPU. Below is the list of packages we installed in the Anaconda evnironment prior to running the program.
-* **TensorFlow 1.15.0** (tensorflow-gpu==1.15) - We used the following installation guide - [*Anaconda TensorFlow*](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/?highlight=tensorflow). 
-* Install **pip** - We used [*pip 21.0.1*](https://anaconda.org/conda-forge/pip)
+* **TensorFlow 1.15.0** (tensorflow-gpu==1.15) - We used the following installation guide - [Anaconda TensorFlow](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/?highlight=tensorflow). 
+* Install **pip** - We used [pip 21.0.1](https://anaconda.org/conda-forge/pip)
 * **Python 3+** - We used Python 3.7.9, but it can work with 2.7, 3.6, 3.5, and 3.4.
-* Install **numpy** into your environment. The version we used is 1.20.0. Here is a guide on [*Installing NUMPY*](https://numpy.org/install/).
-* Lastly, you will likely need to install **six 1.15.0**. [*Six*](https://pypi.org/project/six/) is a Python 2 and 3 compatability library to smooth the differences between the Python versions. 
+* Install **numpy** into your environment. The version we used is 1.20.0. Here is a guide on [Installing NUMPY](https://numpy.org/install/).
+* Lastly, you will likely need to install **six 1.15.0**. [Six](https://pypi.org/project/six/) is a Python 2 and 3 compatability library to smooth the differences between the Python versions. 
 
 ## How to Execute The Code
 1. To train, run [train.py](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/blob/main/train.py). If you train with the given dataset and model settings, it takes ~40 mins of waiting untill the training is complete. The command to run the training is `python train.py` (make sure the path in the evnironment is correct). To access all the parameters use `python train.py --help`.
-2. In result of training, it will create new [*logs*](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/logs), checkpoints and vocabulary in the [*save*](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/save) and [*games*](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/data/games) folders.
+2. In result of training, it will create new [logs](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/logs), checkpoints and vocabulary in the [save](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/save) and [games](https://github.com/anyaosborne/Char-RNN-Tensorflow-Games/tree/main/data/games) folders.
+3. The sample output is generated from the saved checkpoints. To receive one, run `python sample.py`. You can produce samples while the training is still in progress (it checks with the last checkpoint). However, it works only in CPU or using another GPU. To force CPU mode, use `export CUDA_VISIBLE_DEVICES=""` and `unset CUDA_VISIBLE_DEVICES` afterward
+(resp. `set CUDA_VISIBLE_DEVICES=""` and `set CUDA_VISIBLE_DEVICES=` on Windows). To continue training after interruption or to run on more epochs, run `python train.py --init_from=save`.
 
-To sample from a checkpointed model, `python sample.py`.
-Sampling while the learning is still in progress (to check last checkpoint) works only in CPU or using another GPU.
-To force CPU mode, use `export CUDA_VISIBLE_DEVICES=""` and `unset CUDA_VISIBLE_DEVICES` afterward
-(resp. `set CUDA_VISIBLE_DEVICES=""` and `set CUDA_VISIBLE_DEVICES=` on Windows).
+## About Dataset
+You can use any plain text file as input. In this project, we used the output text generated from our [anyaosborne/Wikipedia-Text-Extractor-Games](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games) that includes 110 game descriptions extracted from Wikipedia as a plain text file.
 
-To continue training after interruption or to run on more epochs, `python train.py --init_from=save`
-
-## Datasets
-You can use any plain text file as input. For example you could download [The complete Sherlock Holmes](https://sherlock-holm.es/ascii/) as such:
-
-```bash
-cd data
-mkdir sherlock
-cd sherlock
-wget https://sherlock-holm.es/stories/plain-text/cnus.txt
-mv cnus.txt input.txt
+## Output Samples
+Here are some examples of samples we got based on various modifications completed to the training model.
+**Sample From the Inital Training** - based on full descriptions of 110 games:
 ```
-
-Then start train from the top level directory using `python train.py --data_dir=./data/sherlock/`
-
-A quick tip to concatenate many small disparate `.txt` files into one large training file: `ls *.txt | xargs -L 1 cat >> input.txt`.
+can only direct story moming out of Game of the game is a villuse "the test dead in to the form, while they had screen is not how they have blog to the class, a moving months atcess that they could be reward the Campaigoni (on Otton 64 and BioShock 2 was the past of Japan better up at the same you began your ball of set in the game not this game to terms in hosper been "itsumes the besout to sporce the live across the lawmens of the Computing them their story, the use the game's best launchers,
+```
+**Sample From a Different Input File** - in experimenting with the input file, we decided to use a shorter version with a repetitive vocabulary. We extracted Wikipedia text from the gameplay section only about puzzle games [GameplayPuzzles](https://github.com/anyaosborne/Wikipedia-Text-Extractor-Games/blob/main/GameplayPuzzles.txt). Here is the sample we received.
+**659/660 (epoch 109), train_loss = 2.161, time/batch = 0.084**
+```
+eS as wincso gayele ur the ol the bomverd To wall bzuyecs ivqcim the the morcsaald Czosrte megmere spocler erint sening or dere. thing a saxo fupsaic bactor the an cleecutes the beres. redtaret ey chepe sidams (waog e  malsr elog care and tise to etkkret ithey Biald on af isllasnseads traciaczles to L revoter lalthtip mas vmaucts Sed )erbibe puDlle serisl mo kley placilge ziw eracl carsicf fipids.sdith the te gker somt.s fiwe semdith ix Goces molings the mond thse cacpes bales on fom silh a whel
+```
 
 ## Tuning
 
