@@ -1,6 +1,6 @@
 # Char-RNN-Tensorflow-Games
 
-This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](https://github.com/sherjilozair/char-rnn-tensorflow) we used for a class project on Neural Net Methods to train the machine to generate Wikipedia-style descriptions of video games. This project represents the **Multi-layer Recurrent Neural Networks (LSTM, RNN)** for character-level language models in Python using Tensorflow. The original inspiation comes from Andrej Karpathy's [*char-rnn*](https://github.com/karpathy/char-rnn). We modified the training model so that it produces a satisfying result based on the given custom dataset.
+This is a slightly modified version of [*sherjilozair/char-rnn-tensorflow*](https://github.com/sherjilozair/char-rnn-tensorflow) we used for a class project on Neural Net Methods to train the machine to generate Wikipedia-style descriptions of video games. This project is completed by Kyle Gonzalez, Cassandra Ravenbrook, and Anya Osborne. It represents the **Multi-layer Recurrent Neural Networks (LSTM, RNN)** for character-level language models in Python using Tensorflow. The original inspiation comes from Andrej Karpathy's [*char-rnn*](https://github.com/karpathy/char-rnn). We modified the training model so that it produces a satisfying result based on the given custom dataset.
 
 ## Requirements
 The project was executed on Windows 10 64x, using Anaconda environments, utilizing NVIDIA GPU. Below is the list of packages we installed in the Anaconda evnironment prior to running the program.
